@@ -3,13 +3,13 @@ a{text-decoration: none;color:red;}
 .w{width :100%}
 .fl{float:left;}
 .fr{float:right;}
-.wauto{margin:0 auto;width:720px;}
+.wauto{margin:0 auto;width:1080px;}
 
 
 
 
 
 .header{
-    height: 89px;
+    height: 144px;
     background: #393a3e;
 }
