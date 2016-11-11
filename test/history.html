@@ -5,14 +5,15 @@
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
     <meta name="format-detection" content="telephone=no">
-    <title>guardian</title>
+    <title>实时</title>
     <link rel="stylesheet" href="../css/frozen.css">
+    <link rel="stylesheet" href="demo.css">
 </head>
 
 <body ontouchstart>
     <header class="ui-header ui-header-positive ui-border-b">
         <i class="ui-icon-return" onclick="history.back()"></i>
-        <h1>历史查询</h1>
+        <h1>实时</h1>
         <button class="ui-btn" onclick="location.href='./index.html'">
             <i class="ui-icon-home" style="line-height: 30px;color: #333;"></i>
         </button>
@@ -25,7 +26,246 @@
         </ul>
     </footer>
     <section class="ui-container">
-    
+        <div class="demo-item">
+            <p class="demo-desc">查询条件</p>
+            <div class="demo-block">
+                <div class="ui-form ui-border-t">
+                    <form action="#">
+                        <div class="ui-form-item ui-border-b">
+                            <label>系统</label>
+                            <div class="ui-select-group">
+                                <div class="ui-select">
+                                    <select id="system" name="system">
+                                        <option value="">系统1</option>
+                                        <option value="">系统2</option>
+                                        <option value="">系统3</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ui-form-item ui-border-b">
+                            <label>接口</label>
+                            <div class="ui-select-group">
+                                <div class="ui-select">
+                                    <select id="interface" name="interface">
+                                        <option value="">interface1</option>
+                                        <option value="">interface1</option>
+                                        <option value="">interface1</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ui-form-item ui-border-b">
+                            <label>分组</label>
+                            <div class="ui-select-group">
+                                <div class="ui-select">
+                                    <select id="group" name="group">
+                                        <option value="">group1</option>
+                                        <option value="">group1</option>
+                                        <option value="">group1</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ui-form-item ui-border-b">
+                            <label>方法</label>
+                            <div class="ui-select-group">
+                                <div class="ui-select">
+                                    <select id="method" name="method">
+                                        <option value="">method1</option>
+                                        <option value="">method1</option>
+                                        <option value="">method1</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ui-form-item ui-border-b">
+                            <label>日期</label>
+                            <div class="ui-select-group">
+                                <div class="ui-select">
+                                    <select>
+                                        <option>2015</option>
+                                        <option>2016</option>
+                                    </select>
+                                </div>
+                                <div class="ui-select">
+                                    <select>
+                                        <option value="">1</option>
+                                        <option value="">2</option>
+                                        <option value="">3</option>
+                                        <option value="">4</option>
+                                        <option value="">5</option>
+                                        <option value="">6</option>
+                                        <option value="">7</option>
+                                        <option value="">8</option>
+                                        <option value="">9</option>
+                                        <option value="">10</option>
+                                        <option value="">11</option>
+                                        <option value="">12</option>
+                                    </select>
+                                </div>
+                                <div class="ui-select">
+                                    <select>
+                                        <option value="">1</option>
+                                        <option value="">2</option>
+                                        <option value="">3</option>
+                                        <option value="">4</option>
+                                        <option value="">5</option>
+                                        <option value="">6</option>
+                                        <option value="">7</option>
+                                        <option value="">8</option>
+                                        <option value="">9</option>
+                                        <option value="">10</option>
+                                        <option value="">11</option>
+                                        <option value="">12</option>
+                                        <option value="">13</option>
+                                        <option value="">14</option>
+                                        <option value="">15</option>
+                                        <option value="">16</option>
+                                        <option value="">17</option>
+                                        <option value="">18</option>
+                                        <option value="">19</option>
+                                        <option value="">20</option>
+                                        <option value="">21</option>
+                                        <option value="">22</option>
+                                        <option value="">23</option>
+                                        <option value="">24</option>
+                                        <option value="">25</option>
+                                        <option value="">26</option>
+                                        <option value="">27</option>
+                                        <option value="">28</option>
+                                        <option value="">29</option>
+                                        <option value="">30</option>
+                                        <option value="">31</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ui-form-item ui-border-b">
+                            <label>时间</label>
+                            <div class="ui-select-group">
+                                <div class="ui-select">
+                                    <select>
+                                        <option value="">1</option>
+                                        <option value="">2</option>
+                                        <option value="">3</option>
+                                        <option value="">4</option>
+                                        <option value="">5</option>
+                                        <option value="">6</option>
+                                        <option value="">7</option>
+                                        <option value="">8</option>
+                                        <option value="">9</option>
+                                        <option value="">10</option>
+                                        <option value="">11</option>
+                                        <option value="">12</option>
+                                        <option value="">13</option>
+                                        <option value="">14</option>
+                                        <option value="">15</option>
+                                        <option value="">16</option>
+                                        <option value="">17</option>
+                                        <option value="">18</option>
+                                        <option value="">19</option>
+                                        <option value="">20</option>
+                                        <option value="">21</option>
+                                        <option value="">22</option>
+                                        <option value="">23</option>
+                                        <option value="">24</option>
+                                    </select>
+                                </div>
+                                <div class="ui-select">
+                                    <select>
+                                        <option value="">1</option>
+                                        <option value="">2</option>
+                                        <option value="">3</option>
+                                        <option value="">4</option>
+                                        <option value="">5</option>
+                                        <option value="">6</option>
+                                        <option value="">7</option>
+                                        <option value="">8</option>
+                                        <option value="">9</option>
+                                        <option value="">10</option>
+                                        <option value="">11</option>
+                                        <option value="">12</option>
+                                        <option value="">13</option>
+                                        <option value="">14</option>
+                                        <option value="">15</option>
+                                        <option value="">16</option>
+                                        <option value="">17</option>
+                                        <option value="">18</option>
+                                        <option value="">19</option>
+                                        <option value="">20</option>
+                                        <option value="">21</option>
+                                        <option value="">22</option>
+                                        <option value="">23</option>
+                                        <option value="">24</option>
+                                        <option value="">25</option>
+                                        <option value="">26</option>
+                                        <option value="">27</option>
+                                        <option value="">28</option>
+                                        <option value="">29</option>
+                                        <option value="">30</option>
+                                        <option value="">31</option>
+                                        <option value="">32</option>
+                                        <option value="">33</option>
+                                        <option value="">34</option>
+                                        <option value="">35</option>
+                                        <option value="">36</option>
+                                        <option value="">37</option>
+                                        <option value="">38</option>
+                                        <option value="">39</option>
+                                        <option value="">40</option>
+                                        <option value="">41</option>
+                                        <option value="">42</option>
+                                        <option value="">43</option>
+                                        <option value="">44</option>
+                                        <option value="">45</option>
+                                        <option value="">46</option>
+                                        <option value="">47</option>
+                                        <option value="">48</option>
+                                        <option value="">49</option>
+                                        <option value="">50</option>
+                                        <option value="">51</option>
+                                        <option value="">52</option>
+                                        <option value="">53</option>
+                                        <option value="">54</option>
+                                        <option value="">55</option>
+                                        <option value="">56</option>
+                                        <option value="">57</option>
+                                        <option value="">58</option>
+                                        <option value="">59</option>
+                                        <option value="">60</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ui-form-item ui-border-b">
+                            <label>范围</label>
+                            <div class="ui-select-group">
+                                <div class="ui-select">
+                                    <select id="" name="">
+                                        <option value="">1分钟</option>
+                                        <option value="">2分钟</option>
+                                        <option value="">3分钟</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ui-form-item ui-border-b">
+                            <label>维度</label>
+                            <div class="ui-select-group">
+                                <div class="ui-select">
+                                    <select id="type" name="type">
+                                        <option value="">type1</option>
+                                        <option value="">type2</option>
+                                        <option value="">type3</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
         <div style="height:300px;" id="main"></div>
     </section>
     <script src="../lib/zepto.min.js"></script>
@@ -35,66 +275,81 @@
     <script>
     var myChart = echarts.init(document.getElementById('main'), 'roma');
 
-    function randomData() {
-        now = new Date(+now + oneDay);
-        value = value + Math.random() * 21 - 10;
-        return {
-            name: now.getTime(),
-            value: [
-                now.getTime(),
-                Math.round(value)
-            ]
-        }
-    }
-
-    var data = [];
-    var now = +new Date();
-    var oneDay = 1000;
-    var value = Math.random() * 1000;
-    for (var i = 0; i < 1000; i++) {
-        data.push(randomData());
-    }
-
     var option = {
         title: {
-            text: '动态模拟订单量(单位k)'
+            text: '堆叠区域图'
         },
-        xAxis: {
-            type: 'time',
-            splitLine: {
-                show: false
-            }
+        tooltip: {
+            trigger: 'axis'
         },
-        yAxis: {
-            type: 'value',
-            boundaryGap: [0, '100%'],
-            splitLine: {
-                show: false
-            }
+        legend: {
+            x: 'right',
+            orient: 'vertical',
+            data: ['邮件营销', '联盟广告', '视频广告', '直接访问', '搜索引擎']
         },
+        grid: {
+            left: '3%',
+            right: '4%',
+            bottom: '3%',
+            containLabel: true
+        },
+        xAxis: [{
+            type: 'category',
+            boundaryGap: false,
+            data: ['周一', '周二', '周三', '周四', '周五', '周六', '周日']
+        }],
+        yAxis: [{
+            type: 'value'
+        }],
         series: [{
-            name: '模拟数据',
+            name: '邮件营销',
             type: 'line',
-            showSymbol: false,
-            hoverAnimation: false,
-            data: data
+            stack: '总量',
+            areaStyle: {
+                normal: {}
+            },
+            data: [120, 132, 101, 134, 90, 230, 210]
+        }, {
+            name: '联盟广告',
+            type: 'line',
+            stack: '总量',
+            areaStyle: {
+                normal: {}
+            },
+            data: [220, 182, 191, 234, 290, 330, 310]
+        }, {
+            name: '视频广告',
+            type: 'line',
+            stack: '总量',
+            areaStyle: {
+                normal: {}
+            },
+            data: [150, 232, 201, 154, 190, 330, 410]
+        }, {
+            name: '直接访问',
+            type: 'line',
+            stack: '总量',
+            areaStyle: {
+                normal: {}
+            },
+            data: [320, 332, 301, 334, 390, 330, 320]
+        }, {
+            name: '搜索引擎',
+            type: 'line',
+            stack: '总量',
+            label: {
+                normal: {
+                    show: true,
+                    position: 'top'
+                }
+            },
+            areaStyle: {
+                normal: {}
+            },
+            data: [820, 932, 901, 934, 1290, 1330, 1320]
         }]
     };
-     myChart.setOption(option);
-    setInterval(function() {
-
-        for (var i = 0; i < 5; i++) {
-            data.shift();
-            data.push(randomData());
-        }
-
-        myChart.setOption({
-            series: [{
-                data: data
-            }]
-        });
-    }, 1000);
-
+    myChart.setOption(option);
     window.onresize = myChart.resize;
     </script>
 </body>
