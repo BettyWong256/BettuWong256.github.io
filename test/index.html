@@ -1,0 +1,173 @@
+<!DOCTYPE HTML>
+<html lang="cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css/new-frozen.css">
+    <script src="tajs.js" charset="UTF-8"></script>
+    <script src="../lib/new-zepto.min.js"></script>
+    <script src="../js/new-frozen.js"></script>
+    <script src="../js/effect/cover.js"></script>
+</head>
+
+<body>
+    <!-- CSS -->
+    <style type="text/css">
+    body {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+    }
+    
+    .ui-frozen-cover {
+        overflow: hidden;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+    }
+    
+    .item {
+        width: 100%;
+        height: 33.33%;
+        display: -webkit-box;
+        -webkit-box-pack: center;
+        -webkit-box-align: center
+    }
+    
+    .close {
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        display: block;
+        width: 50px;
+        height: 50px;
+        color: #fff;
+        text-align: center;
+        line-height: 50px;
+        display: none;
+        z-index: 2000
+    }
+    
+    .title {
+        color: #fff;
+        display: block;
+        text-align: center;
+        font-size: 24px;
+        -webkit-transition: all .5s .3s;
+    }
+    
+    .info {
+        color: #fff;
+        display: block;
+        text-align: center;
+        -webkit-transition: all .5s;
+        top: 50%;
+        width: 100%;
+        top: 50%;
+        position: absolute;
+        z-index: 2000;
+        opacity: 0;
+        -webkit-transform: translateY(50px);
+    }
+    .info span{
+        border:3px solid #fff;
+        border-radius: 5px;
+        padding: 5px 10px;
+    }
+    
+    .info.show {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+    }
+    </style>
+    <!-- HTML -->
+    <div class="ui-frozen-cover" id="cover" data-start-pos="source" data-trigger=".item" data-dismiss=".close">
+        <div class="close"><i class="ui-icon-close-progress" style="
+        font-size: 50px;"></i></div>
+        <div class="item" style="background:#be0106;" data-background="#be0106">
+            <div class="title">实时查询</div>
+        </div>
+        <div class="item" style="background:#7a6e6e;" data-background="#7a6e6e">
+            <div class="title">历史查询</div>
+        </div>
+        <div class="item" style="background:#fff;" data-background="#fff">
+            <div class="title" style="color:#000;">敬请期待</div>
+        </div>
+    </div>
+    <div class="text">
+        <div class="info">
+            <p><span onclick="location.href='monitor.html'">进入</span></p>
+        </div>
+        <div class="info">
+            <p><span onclick="location.href='history.html'">进入</span></p>
+        </div>
+        <div class="info">
+            <p></p>
+        </div>
+    </div>
+    <!-- JS -->
+    <script type="text/javascript">
+    $(".ui-frozen-cover").cover({
+        callback: function(type, obj) {
+            switch (type) {
+                case "show":
+                    covershow(obj);
+                    break;
+                case "hide":
+                    coverhide(obj);
+                    break;
+                case "hidden":
+                    coverhidden(obj);
+                    break;
+                case "shown":
+                    covershown(obj);
+                    break;
+            }
+
+        }
+    });
+
+    function covershow(cover) {
+        if (!cover._isShown) {
+            var title = cover.currentTrigger.find('.title'),
+                index = $(".item").index(cover.currentTrigger);
+
+            title.css({
+                '-webkit-transform': 'translateY(' + (cover.position.screenHeight / 2 - title.offset().top - 80) + 'px)'
+            });
+            $('.info').eq(index).css({
+                "-webkit-transition-delay": ".5s"
+            })
+            $('.info').eq(index).addClass('show');
+        }
+    };
+
+    function coverhide(cover) {
+        var title = cover.currentTrigger.find('.title'),
+            index = $(".item").index(cover.currentTrigger);
+
+        title.css({
+            '-webkit-transform': 'translateY(0px)'
+        })
+        $('.info').eq(index).css({
+            "-webkit-transition-delay": "0s"
+        })
+        $('.info').eq(index).removeClass('show');
+    };
+
+    function covershown(cover) {
+        $('.close').show();
+    };
+
+    function coverhidden() {
+        $('.close').hide();
+    };
+    </script>
+</body>
+
+</html>
