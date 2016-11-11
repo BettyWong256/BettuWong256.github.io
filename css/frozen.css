@@ -61,7 +61,7 @@ button {
   padding: 0; }
 
 body {
-  font-family: "Helvetica Neue",Helvetica,STHeiTi,sans-serif;
+  font-family: "Microsoft YaHei" ! important;
   line-height: 1.5;
   font-size: 16px;
   color: #000;
@@ -358,7 +358,7 @@ em, i {
   content: "\f640"; }
 
 a {
-  color: #00a5e0; }
+  color: #e01f54; }
 
 em {
   color: #ff8444; }
@@ -787,7 +787,7 @@ h6, .ui-txt-tips {
 
 .ui-header-positive,
 .ui-footer-positive {
-  background-color: #18b4ed;
+  background-color: #e01f54;
   color: #fff; }
   .ui-header-positive a, .ui-header-positive a:active, .ui-header-positive i,
   .ui-footer-positive a,
@@ -797,7 +797,7 @@ h6, .ui-txt-tips {
 
 .ui-footer-btn {
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #f9f9f9), to(#e0e0e0));
-  color: #00a5e0; }
+  color: #e01f54; }
   .ui-footer-btn .ui-tiled {
     height: 100%; }
 
@@ -1241,7 +1241,7 @@ h6, .ui-txt-tips {
   content: ""; }
 
 .ui-tag-freelimit:before {
-  background-color: #18b4ed;
+  background-color: #e01f54;
   content: '限免'; }
 
 .ui-tag-free:before {
@@ -1299,7 +1299,7 @@ h6, .ui-txt-tips {
 
 .ui-tag-selected:after {
   content: "";
-  color: #18b4ed;
+  color: #e01f54;
   right: -5px;
   top: -5px;
   z-index: 9;
@@ -1350,7 +1350,7 @@ h6, .ui-txt-tips {
   background-color: #fdfdfd;
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0.5, #fff), to(#fafafa));
   vertical-align: top;
-  color: #00a5e0;
+  color: #e01f54;
   -webkit-box-sizing: border-box;
   background-clip: padding-box;
   border: 1px solid #cacccd;
@@ -1388,9 +1388,9 @@ h6, .ui-txt-tips {
   right: 0; }
 
 .ui-btn-primary {
-  background-color: #18b4ed;
+  background-color: #e01f54;
   border-color: #0baae4;
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0.5, #1fbaf3), to(#18b4ed));
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0.5, #1fbaf3), to(#e01f54));
   color: white;
   background-clip: padding-box; }
 
@@ -1474,7 +1474,7 @@ h6, .ui-txt-tips {
     top: 0;
     height: 100%;
     overflow: hidden;
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0.5, #1fbaf3), to(#18b4ed));
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0.5, #1fbaf3), to(#e01f54));
     border-bottom-left-radius: 3px;
     border-top-left-radius: 3px; }
     .ui-btn-progress .ui-btn-inner span {
@@ -1643,7 +1643,7 @@ h6, .ui-txt-tips {
   background-color: #e1d498; }
 
 .ui-tooltips-guide .ui-tooltips-cnt {
-  color: #00a5e0;
+  color: #e01f54;
   background-color: rgba(205, 242, 255, 0.95); }
   .ui-tooltips-guide .ui-tooltips-cnt .ui-icon-close:before {
     color: rgba(0, 165, 224, 0.2); }
@@ -2070,7 +2070,7 @@ h6, .ui-txt-tips {
 
 .ui-form-item-l label,
 .ui-form-item-r button {
-  color: #00a5e0;
+  color: #e01f54;
   text-align: center; }
 
 .ui-form-item-r .ui-icon-close {
@@ -2163,7 +2163,7 @@ h6, .ui-txt-tips {
   display: block;
   color: rgba(0, 0, 0, 0.5);
   content: "";
-  color: #18b4ed;
+  color: #e01f54;
   position: absolute;
   top: -22px;
   left: -4px;
@@ -2171,7 +2171,7 @@ h6, .ui-txt-tips {
 
 .ui-checkbox input:checked:before, .ui-checkbox-s input:checked:before {
   content: "";
-  color: #18b4ed; }
+  color: #e01f54; }
 
 .ui-checkbox-s input:before {
   content: ""; }
@@ -2275,7 +2275,7 @@ h6, .ui-txt-tips {
   display: block;
   width: 14px;
   height: 14px;
-  background: #18b4ed;
+  background: #e01f54;
   border-radius: 7px;
   position: absolute;
   left: 6px;
@@ -2348,7 +2348,7 @@ h6, .ui-txt-tips {
   .ui-searchbar-wrap button {
     margin-right: 10px; }
   .ui-searchbar-wrap .ui-searchbar-cancel {
-    color: #00a5e0;
+    color: #e01f54;
     font-size: 16px;
     padding: 4px 8px; }
   .ui-searchbar-wrap .ui-searchbar-input, .ui-searchbar-wrap button, .ui-searchbar-wrap .ui-icon-close {
@@ -2580,8 +2580,8 @@ h6, .ui-txt-tips {
   width: 100%; }
 
 .ui-tab-nav li.current {
-  color: #00a5e0;
-  border-bottom: 2px #00a5e0 solid; }
+  color: #e01f54;
+  border-bottom: 2px #e01f54 solid; }
 
 .ui-tab-nav li:active {
   opacity: .8; }
@@ -2792,7 +2792,7 @@ h6, .ui-txt-tips {
   opacity: 0.5; }
 
 .ui-dialog-ft button {
-  color: #00a5e0;
+  color: #e01f54;
   text-align: center;
   border-right: 1px #e0e0e0 solid;
   width: 100%;

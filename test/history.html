@@ -1,61 +1,119 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
-        <meta name="format-detection" content="telephone=no">
-        <title>FrozenUI Demo</title>
-        <link rel="stylesheet" href="../css/frozen.css">
-    </head>
-    <body ontouchstart>
-        <header class="ui-header ui-header-positive ui-border-b">
-            <i class="ui-icon-return" onclick="history.back()"></i><h1>历史查询</h1><button class="ui-btn" onclick="location.href='./index.html'">回首页</button>
-        </header>
-        <footer class="ui-footer ui-footer-btn">
-            <ul class="ui-tiled ui-border-t">
-                <li data-href="index.html" class="ui-border-r"><div>基础样式</div></li>
-                <li data-href="ui.html" class="ui-border-r"><div>UI组件</div></li>
-                <li data-href="js.html"><div>JS插件</div></li>
-            </ul>
-        </footer>
-        <section class="ui-container">
-            <section id="tab">
-            	<div class="demo-item">
-            		<p class="demo-desc">标签栏</p>
-            		<div class="demo-block">
-            			<div class="ui-tab">
-            			    <ul class="ui-tab-nav ui-border-b">
-            			        <li class="current">热门推荐</li>
-            			        <li>全部表情</li>
-            			        <li>表情</li>
-            			    </ul>
-            			    <ul class="ui-tab-content" style="width:300%">
-            			        <li>内容1</li>
-            			        <li>内容2</li>
-            			        <li>内容3</li>
-            			    </ul>
-            			</div>
-            		</div>
-            		<script class="demo-script">
-            		
-                    </script>
-            	</div>
-            </section>
-        </section>
-        <script src="../lib/zepto.min.js"></script>
-        <script src="../js/frozen.js"></script>
-        <script>
-        (function (){
-            var tab = new fz.Scroll('.ui-tab', {
-                role: 'tab',
-                autoplay: true,
-                interval: 3000
-            });
-            /* 滑动开始前 */
-            tab.on('beforeScrollStart', function(fromIndex, toIndex) {
-                console.log(fromIndex,toIndex);// from 为当前页，to 为下一页
-            })
-        })();
-        </script>
-    </body>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <title>guardian</title>
+    <link rel="stylesheet" href="../css/frozen.css">
+</head>
+
+<body ontouchstart>
+    <header class="ui-header ui-header-positive ui-border-b">
+        <i class="ui-icon-return" onclick="history.back()"></i>
+        <h1>历史查询</h1>
+        <button class="ui-btn" onclick="location.href='./index.html'">
+            <i class="ui-icon-home" style="line-height: 30px;color: #333;"></i>
+        </button>
+    </header>
+    <footer class="ui-footer ui-footer-btn">
+        <ul class="ui-tiled ui-border-t">
+            <li data-href="index.html" class="ui-border-r">
+                <div>查询</div>
+            </li>
+        </ul>
+    </footer>
+    <section class="ui-container">
+    <div style="height:300px;" id="main"></div>
+
+    </section>
+    <script src="../lib/zepto.min.js"></script>
+    <script src="../js/frozen.js"></script>
+    <script src="echarts/echarts.min.js"></script>
+    <script src="echarts/theme/roma.js"></script>
+    <script>
+        var myChart = echarts.init(document.getElementById('main'),'roma'); 
+        
+        var option = {
+    title: {
+        text: '堆叠区域图'
+    },
+    tooltip : {
+        trigger: 'axis'
+    },
+    legend: {
+        data:['邮件营销','联盟广告','视频广告','直接访问','搜索引擎']
+    },
+    toolbox: {
+        feature: {
+            saveAsImage: {}
+        }
+    },
+    grid: {
+        left: '3%',
+        right: '4%',
+        bottom: '3%',
+        containLabel: true
+    },
+    xAxis : [
+        {
+            type : 'category',
+            boundaryGap : false,
+            data : ['周一','周二','周三','周四','周五','周六','周日']
+        }
+    ],
+    yAxis : [
+        {
+            type : 'value'
+        }
+    ],
+    series : [
+        {
+            name:'邮件营销',
+            type:'line',
+            stack: '总量',
+            areaStyle: {normal: {}},
+            data:[120, 132, 101, 134, 90, 230, 210]
+        },
+        {
+            name:'联盟广告',
+            type:'line',
+            stack: '总量',
+            areaStyle: {normal: {}},
+            data:[220, 182, 191, 234, 290, 330, 310]
+        },
+        {
+            name:'视频广告',
+            type:'line',
+            stack: '总量',
+            areaStyle: {normal: {}},
+            data:[150, 232, 201, 154, 190, 330, 410]
+        },
+        {
+            name:'直接访问',
+            type:'line',
+            stack: '总量',
+            areaStyle: {normal: {}},
+            data:[320, 332, 301, 334, 390, 330, 320]
+        },
+        {
+            name:'搜索引擎',
+            type:'line',
+            stack: '总量',
+            label: {
+                normal: {
+                    show: true,
+                    position: 'top'
+                }
+            },
+            areaStyle: {normal: {}},
+            data:[820, 932, 901, 934, 1290, 1330, 1320]
+        }
+    ]
+};
+
+        myChart.setOption(option); 
+    </script>
+</body>
 </html>
